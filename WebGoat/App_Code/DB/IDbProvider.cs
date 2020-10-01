@@ -49,6 +49,8 @@ namespace OWASP.WebGoat.NET.App_Code.DB
 
         string GetEmailByCustomerNumber(string num);
 
+        string GetEmailByCustomerSeiLaOQue(int num2);
+
         DataSet GetCustomerEmails(string email);
     }
 }
