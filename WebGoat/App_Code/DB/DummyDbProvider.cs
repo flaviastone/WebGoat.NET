@@ -116,14 +116,14 @@ namespace OWASP.WebGoat.NET.App_Code.DB
             return string.Empty;
         }
 
-        public string GetEmailByCustomerSeiLaOQue(string num)
-        {
-            return string.Empty;
-        }
-
         public DataSet GetCustomerEmails(string email)
         {
             return null;
+        }
+
+        public string GetEmailByCustomerSeiLaOQue(int num2)
+        {
+             return string.Empty;
         }
 
         public string Name
