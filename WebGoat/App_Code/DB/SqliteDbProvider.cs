@@ -566,7 +566,7 @@ namespace OWASP.WebGoat.NET.App_Code.DB
             return output;
         }
 
-        public string GetEmailByCustomerSeiLaOQue(string num)
+        public string GetEmailByCustomerSeiLaOQue(int num2)
         {
             string output = "";
             try
@@ -576,7 +576,7 @@ namespace OWASP.WebGoat.NET.App_Code.DB
                 {
                     connection.Open();
 
-                    string sql = "select email from CustomerLogin where customerNumber = " + num;
+                    string sql = "select email from CustomerxyzLogin where customerNumber = " + num2;
                     SqliteCommand cmd = new SqliteCommand(sql, connection);
                     output = (string)cmd.ExecuteScalar();
                 }
