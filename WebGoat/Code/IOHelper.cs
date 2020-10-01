@@ -12,6 +12,7 @@ namespace OWASP.WebGoat.NET
         {
             FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader sr = new StreamReader(fs);
+            // string data = sr.ReadToEnd();
             string data = sr.ReadToEnd();
             sr.Close();
             return data;
