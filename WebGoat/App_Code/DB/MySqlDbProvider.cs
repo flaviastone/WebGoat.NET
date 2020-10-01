@@ -554,6 +554,31 @@ namespace OWASP.WebGoat.NET.App_Code.DB
             return output;
         }
 
+        public string GetEmailByCustomerSeiLaOQue(int num)
+        {
+            string output = "";
+            try
+            {
+            
+                output = (String)MySqlHelper.ExecuteScalar(_connectionString, "select email from CustomerLogin where customerNumber = " + num);
+                /*using (MySqlConnection connection = new MySqlConnection(_connectionString))
+                {
+                    string sql = "select email from CustomerLogin where customerNumber = " + num;
+                    MySqlCommand cmd = new MySqlCommand(sql, connection);
+                    output = (string)cmd.ExecuteScalar();
+                }*/
+                
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error getting email by customer number", ex);
+                output = ex.Message;
+            }
+            
+            return output;
+        }
+
+
         public DataSet GetCustomerEmails(string email)
         {
             string sql = "select email from CustomerLogin where email like '" + email + "%'";

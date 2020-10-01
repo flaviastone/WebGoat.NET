@@ -121,6 +121,11 @@ namespace OWASP.WebGoat.NET.App_Code.DB
             return null;
         }
 
+        public string GetEmailByCustomerSeiLaOQue(int num2)
+        {
+             return string.Empty;
+        }
+
         public string Name
         {
             get { return "Dummy"; }
